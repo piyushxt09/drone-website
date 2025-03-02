@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --primary-color: #12B4DA;
+}
+
+.my-primary-text {
+    color: var(--primary-color) !important;
+}
+
+.my-button-primary {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border: 1px solid var(--primary-color) !important;
+    transition: 0.4s;
+    border-radius: 50px;
+    padding: 10px 30px !important;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.my-button-primary-selling{
+    background-color: white !important;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+    transition: 0.4s;
+    border-radius: 50px;
+    padding: 10px 30px !important;
+    margin: 0px 20px;
+    transition: 0.4s ease-out;
+}
+
+.my-button-primary-selling:hover{
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.my-button-primary-selling.text-white{
+    background-color: var(--primary-color) !important;
+    color: white !important;
+
+}
+
+.my-button-primary:hover {
+    background-color: white !important;
+    color: var(--primary-color) !important;
+
+}
+
+.my-button-secondary {
+    background-color: white !important;
+    color: var(--primary-color) !important;
+    border: 1px solid white !important;
+    transition: 0.4s;
+    padding: 10px 20px !important;
+}
+
+.my-button-secondary:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+body {
+
+    font-family: "Poppins", serif !important;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.best-selling-cards .best-selling-card{
+    background-color: #e3f6ff;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color) !important;
+}
+.best-selling-cards .best-selling-card img{
+    width: 250px;
+    height: 173px;
+}
+
+.best-selling-card .New{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 10px;
+    position:relative;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    left: -25px;
+    bottom: 80px;
+}
+.best-selling-card {
+    position: relative;
+}
+
+.best-selling-card .Heart{
+ position: absolute;
+ top: 20px;
+ font-size: 20px;
+ color: var(--primary-color);
+ right: 30px;
+ cursor: pointer;
+ transition: 0.4s;
+}
+
+.best-selling-card .Heart:hover{
+    color: #981010;
+}
+
+
+.scroll-button {
+    background-color: var(--primary-color);
+    color: white;
+    transition: 0.4s ease-in-out;
+
+}
+
+
+.my-bg-background
+{
+    background-color: var(--primary-color);
+}

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --primary-color: #12B4DA;
+}
+
+.my-primary-text {
+    color: var(--primary-color) !important;
+}
+
+@media screen and (max-width: 900px) {
+    .left-side{
+        display: none;
+    }
+}
+
+.my-button-primary {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border: 1px solid var(--primary-color) !important;
+    transition: 0.4s;
+    padding: 10px 30px !important;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.my-button-primary:hover {
+    background-color: white !important;
+    color: var(--primary-color) !important;
+
+}
+
+.my-button-secondary {
+    background-color: white !important;
+    color: var(--primary-color) !important;
+    border: 1px solid white !important;
+    transition: 0.4s;
+    padding: 10px 20px !important;
+}
+
+.my-button-secondary:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+body {
+
+    font-family: "Poppins", serif !important;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+.Navbar-section .left-side {
+    background-color: var(--primary-color);
+    height: 105vh;
+    border-right: white;
+
+}
+
+.Navbar-section .left-side img {
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.Navbar-section .left-side h1 {
+    color: white;
+    font-size: 100px;
+    width: 800px;
+    position: absolute;
+    top: 200px;
+    font-weight: bold;
+    left: -50px;
+    /* right: 0px; */
+    transform: rotate(270deg);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    margin: 20px 40px;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.navbar-nav li a:hover{
+    color: black !important;
+}
+
+.navbar-collapse {
+    padding-left: 40px;
+}
+
+.drone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    /* Creates 3D depth */
+}
+
+.drone-img {
+    transition: transform 0.1s ease-out, box-shadow 0.3s ease;
+    max-width: 600px !important;
+    padding: 20px 0px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transform-origin: center;
+    border-radius: 10px;
+    cursor: pointer;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
+}
+
+.drone-img:hover {
+    box-shadow: 0 20px 40px rgb(41, 169, 223);
+}
+
+.list-home {
+    background-color: var(--primary-color) !important;
+    padding: 40px;
+}
+
+.list-home container {
+    padding-top: 40px;
+}
