@@ -10,6 +10,7 @@ import Illlustration from "../src/assets/Illustration.png";
 
 export default function SignupPage() {
     const [showPassword, setShowPassword] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
@@ -39,6 +40,7 @@ export default function SignupPage() {
             return;
         }
 
+        setLoading(true);
         try {
             const response = await fetch("https://drone-website-backend-aeqq.onrender.com/api/signup", {
                 method: "POST",
@@ -49,17 +51,13 @@ export default function SignupPage() {
             });
 
             const data = await response.json();
+            setLoading(false);
 
             if (response.ok) {
-                // Store JWT token and user data
                 localStorage.setItem("token", data.token);
                 localStorage.setItem("user", JSON.stringify(data.user));
-
-                // Show success modal
                 const successModal = new window.bootstrap.Modal(document.getElementById("successModal"));
                 successModal.show();
-
-                // Hide modal and redirect
                 setTimeout(() => {
                     successModal.hide();
                     document.querySelector(".modal-backdrop")?.remove();
@@ -70,6 +68,7 @@ export default function SignupPage() {
                 new window.bootstrap.Modal(document.getElementById("errorModal")).show();
             }
         } catch (error) {
+            setLoading(false);
             setErrorMessage("Server error. Please try again later.");
             new window.bootstrap.Modal(document.getElementById("errorModal")).show();
         }
@@ -77,6 +76,13 @@ export default function SignupPage() {
 
     return (
         <div className='Navbar-section'>
+             {loading && (
+                <div className="loading-overlay">
+                    <div className="spinner-border text-primary" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            )}
             <div className="d-flex">
                 <div className="left-side col-lg-3 " style={{ height: "100vh" }}>
                     <div>
