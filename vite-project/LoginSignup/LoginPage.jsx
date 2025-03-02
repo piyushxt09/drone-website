@@ -42,7 +42,7 @@ export default function LoginPage() {
                 new window.bootstrap.Modal(document.getElementById("successModal")).show();
                 setTimeout(() => {
                     document.querySelector(".modal-backdrop")?.remove();
-                    navigate("/home");
+                    navigate("/");
                     window.location.reload(); // Refresh the Home page
                 }, 2000);
 
