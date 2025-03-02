@@ -63,7 +63,7 @@ export default function SignupPage() {
                 setTimeout(() => {
                     successModal.hide();
                     document.querySelector(".modal-backdrop")?.remove();
-                    navigate("/home");
+                    navigate("/");
                 }, 2000);
             } else {
                 setErrorMessage(data.message || "Signup failed. Try again.");
