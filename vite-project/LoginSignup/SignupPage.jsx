@@ -40,7 +40,7 @@ export default function SignupPage() {
         }
 
         try {
-            const response = await fetch("http://localhost:8081/api/signup", {
+            const response = await fetch("https://drone-website-backend-aeqq.onrender.com/api/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
