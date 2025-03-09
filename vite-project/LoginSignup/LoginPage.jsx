@@ -8,6 +8,7 @@ import Illlustration from "../src/assets/Illustration.png";
 
 export default function LoginPage() {
     const [showPassword, setShowPassword] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -27,6 +28,8 @@ export default function LoginPage() {
             return;
         }
 
+        setIsLoading(true); // Show loader when request starts
+
         try {
             const response = await fetch("https://drone-website-backend-aeqq.onrender.com/api/login", {
                 method: "POST",
@@ -37,15 +40,14 @@ export default function LoginPage() {
             const data = await response.json();
 
             if (response.ok) {
-                localStorage.setItem("token", data.token); // Store JWT
-                localStorage.setItem("user", JSON.stringify(data.user)); // Store user data
+                localStorage.setItem("token", data.token);
+                localStorage.setItem("user", JSON.stringify(data.user));
                 new window.bootstrap.Modal(document.getElementById("successModal")).show();
                 setTimeout(() => {
                     document.querySelector(".modal-backdrop")?.remove();
                     navigate("/");
-                    window.location.reload(); // Refresh the Home page
+                    window.location.reload();
                 }, 2000);
-
             } else {
                 setErrorMessage(data.message);
                 new window.bootstrap.Modal(document.getElementById("errorModal")).show();
@@ -53,9 +55,16 @@ export default function LoginPage() {
         } catch (error) {
             setErrorMessage("Server error. Try again later.");
             new window.bootstrap.Modal(document.getElementById("errorModal")).show();
+        } finally {
+            setIsLoading(false); // Hide loader when request is done
         }
     };
 
+    const handleKeyDown = (event) => {
+        if (event.key === "Enter") {
+            handleLogin();
+        }
+    };
 
     return (
         <div className="Navbar-section">
@@ -110,7 +119,7 @@ export default function LoginPage() {
                     {/* Login Section */}
                     <section className="mt-5 container d-flex signup-container align-items-center justify-content-between text-start">
                         {/* Login Form */}
-                        <div className="p-4 w-500">
+                        <div className="p-4 w-100 w-sm-400px w-lg-600px">
                             <h2>Log In</h2>
                             <p>
                                 Haven't signed up? <Link to="/signup">Sign Up</Link>
@@ -154,17 +163,20 @@ export default function LoginPage() {
                                 <p className="text-center mt-5">
                                     <Link to="/signup">Sign Up instead</Link>
                                 </p>
-                                <button className="btn my-button-primary w-80 mt-4" onClick={handleLogin}>Log In</button>
+                                <button className="btn my-button-primary w-80 mt-4" onClick={handleLogin} disabled={isLoading} >{isLoading ? "Logging in..." : "Login"}
+                                </button>
                             </div>
                         </div>
 
                         {/* Illustration Image */}
                         <div>
-                            <img src={Illlustration} alt="Illustration" />
+                            <img src={Illlustration} alt="Illustration" className='Illstration' />
                         </div>
                     </section>
                 </div>
             </div>
+
+            {isLoading && <p>Loading...</p>} {/* Loader Message */}
 
             {/* Error Modal */}
             <div className="modal fade" id="errorModal" tabIndex="-1">

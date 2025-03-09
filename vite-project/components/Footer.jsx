@@ -12,7 +12,7 @@ const Footer = () => {
 
             <footer className="footer p-5">
                 <div className="container Footer-container">
-                    <div className="row text-center text-md-start">
+                    <div className="row  text-md-start">
                         {/* Logo & Subscription */}
                         <div className="col-md-4 text-center">
                             <img src={logo} alt="" className="mb-4" />

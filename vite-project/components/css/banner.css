@@ -57,15 +57,31 @@ body {
     font-weight: 500 !important;
 }
 
+.img-fluid {
+    max-width: 600px;
+}
 .banner-button:hover {
     background-color: var(--primary-color);
     color: white;
 }
 
-.banner-heading{
+.banner-heading {
     font-size: 200px;
     color: white;
     position: relative;
     top: 110px;
     margin-top: -100px;
+}
+
+@media screen and (max-width: 900px) {
+    .banner-heading {
+        font-size: 70px;
+        color: white;
+        position: relative;
+        top: 75px;
+        margin-top: -100px;
+    }
+    .img-fluid {
+        max-width: 350px;
+    }
 }

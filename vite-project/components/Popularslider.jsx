@@ -28,7 +28,7 @@ export default function Popularslider() {
   return (
     <section className="slider-section">
       <div className="container">
-        <div className="d-flex Tranding-rows gap-4 mb-5 mt-3">
+        <div className="row Tranding-rows  mb-5 mt-3">
           <div className="col-lg-3">
             <div className="d-flex align-items-center">
               <p className="trending-drones my-primary-text">— Our Trending Drones</p>
@@ -38,7 +38,7 @@ export default function Popularslider() {
             <button className="my-button-primary" style={{ fontSize: "24px" }}>Explore</button>
           </div>
 
-          <div className="col-lg-9">
+          <div className="col-lg-9 mt-sm-2">
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
               spaceBetween={20}

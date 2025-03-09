@@ -108,7 +108,7 @@ export default function SignupPage() {
                             </div>
                             <div className="d-flex align-items-center gap-4 me-5">
                                 <i className="fas fa-shopping-bag text-white me-3"></i>
-                                <Link to="/signup" className="btn btn-light my-primary-text my-button-secondary text-decoration-none fw-bold">SIGN UP</Link>
+                                <Link to="/login" className="btn btn-light my-primary-text my-button-secondary text-decoration-none fw-bold">Log In</Link>
                             </div>
                         </div>
                     </nav>
@@ -120,11 +120,11 @@ export default function SignupPage() {
                                 <p>Already have an account? <a href="/login">Log in</a></p>
 
                                 <div className="row">
-                                    <div className="col-md-6">
+                                    <div className="col-md-6 mt-3">
                                         <label>First name</label>
                                         <input type="text" className="form-control" value={formData.firstName} onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} />
                                     </div>
-                                    <div className="col-md-6">
+                                    <div className="col-md-6 mt-3 ">
                                         <label>Last name</label>
                                         <input type="text" className="form-control" value={formData.lastName} onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} />
                                     </div>
@@ -146,7 +146,7 @@ export default function SignupPage() {
                                         </div>
                                     </div>
 
-                                    <div className="col-md-6">
+                                    <div className="col-md-6 mt-3">
                                         <label>Confirm your password</label>
                                         <div className="input-group">
                                             <input type={showPassword ? "text" : "password"} className="form-control" value={formData.confirmPassword} onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })} />
@@ -168,7 +168,7 @@ export default function SignupPage() {
                             </div>
                         </div>
                         <div>
-                            <img src={Illlustration} alt="Illustration" />
+                            <img src={Illlustration} alt="Illustration" className='Illstration' />
                         </div>
                     </section>
                 </div>

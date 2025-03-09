@@ -46,23 +46,24 @@ const Testimonials = () => {
             <h2 className="text-center mb-4 text-xsm">— Testimonials —</h2>
             <h1 className="text-center text-2xl mb-4 ">What our clients say about us</h1>
             <Swiper
-                slidesPerView={3}
+                slidesPerView={1}  // Default: Show 1 slide (for mobile)
                 centeredSlides={true}
                 loop={true}
                 navigation={true}
                 autoplay={{
-                    delay: 3000, // Auto-slide every 3 seconds
-                    disableOnInteraction: false, // Keeps autoplay running after interaction
+                    delay: 3000,
+                    disableOnInteraction: false,
                 }}
-                pagination={{ clickable: true }} // Enable pagination
-                modules={[Navigation, Autoplay, Pagination]} // Add Pagination module
+                pagination={{ clickable: true }}
+                modules={[Navigation, Autoplay, Pagination]}
                 breakpoints={{
-                    900: { slidesPerView: 3 },
-                    768: { slidesPerView: 2 },
-                    576: { slidesPerView: 1 },
+                    900: { slidesPerView: 3 }, // Show 3 slides for large screens
+                    768: { slidesPerView: 2 }, // Show 2 slides for tablets
+                    576: { slidesPerView: 1 }, // Show 1 slide for small screens (redundant but safe)
                 }}
                 className="testimonial-swiper"
             >
+
                 {testimonials.map((testimonial) => (
                     <SwiperSlide key={testimonial.id} className="testimonial-slide">
                         <div className="testimonial-card">

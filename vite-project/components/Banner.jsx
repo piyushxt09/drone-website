@@ -7,20 +7,21 @@ const Banner = () => {
   return (
     <div className="container-fluid my-bg-background text-white text-center py-5 rounded">
       <div className="d-flex align-items-center justify-content-around">
-      <div >
-          <img 
-            src={DronePhoto}
-            alt="Drone" 
-            className="img-fluid" 
-            style={{ maxWidth: "600px" }}
-          />
+        <div className="row">
+          <div className="col-lg-6">
+            <img
+              src={DronePhoto}
+              alt="Drone"
+              className="img-fluid mt-5 "
+              
+            />
+          </div>
+          <div className="col-lg-6 p-5">
+            <h2 className="display-4 text-start fw-500" style={{ maxWidth: "500px" }}>Are you ready to lead the way</h2>
+            <p className="text-start" style={{ maxWidth: "400px" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+            <button className="d-flex btn btn-light banner-button">Explore</button>
+          </div>
         </div>
-        <div>
-          <h2 className="display-4 text-start fw-500" style={{ maxWidth: "500px" }}>Are you ready to lead the way</h2>
-          <p  className="text-start" style={{ maxWidth: "400px" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
-          <button className="d-flex btn btn-light banner-button">Explore</button>
-        </div>
-        
       </div>
       <h1 className="banner-heading fw-bold">FLYING</h1>
     </div>
