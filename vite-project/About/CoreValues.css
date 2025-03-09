@@ -1,0 +1,76 @@
+/* Background Styling */
+:root {
+    --primary-color: #12B4DA;
+}
+
+
+.core-values-section {
+    background-color: #12b5da4f;
+    /* Light green background */
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Heading Styling */
+.core-values-section h6 {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.core-values-section h2 {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Circular Cards */
+.core-value-card {
+    max-width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.core-value-card:hover{
+    border-radius: 5%;
+}
+
+
+/* Icon Styling */
+.core-value-card svg {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    transition: transform 0.8s ease-in-out;
+}
+.core-value-card:hover{
+    background-color: #12B4DA;
+}
+
+/* 3D Rotation on Hover */
+.core-value-card:hover svg {
+    transform: rotateY(360deg);
+    color: white;
+}
+
+.core-value-card:hover h5, .core-value-card:hover p{
+    color: white;
+}
+/* Text Styling */
+.core-value-card h5 {
+    font-weight: bold;
+    color: #333;
+}
+
+.core-value-card p {
+    font-size: 14px;
+    color: #444;
+}

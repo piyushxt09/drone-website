@@ -7,10 +7,12 @@ import React, { useState } from "react";
 import "./login.css";
 import "font-awesome/css/font-awesome.min.css";
 import Illlustration from "../src/assets/Illustration.png";
+import { useRef } from "react";
 
 export default function SignupPage() {
     const [showPassword, setShowPassword] = useState(false);
     const [loading, setLoading] = useState(false);
+    const navbarRef = useRef(null);
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
@@ -74,9 +76,17 @@ export default function SignupPage() {
         }
     };
 
+    const handleToggle = () => {
+        if (navbarRef.current) {
+            const bsCollapse = new window.bootstrap.Collapse(navbarRef.current, {
+                toggle: true,
+            });
+        }
+    };
+
     return (
         <div className='Navbar-section'>
-             {loading && (
+            {loading && (
                 <div className="loading-overlay">
                     <div className="spinner-border text-primary" role="status">
                         <span className="visually-hidden">Loading...</span>
@@ -95,10 +105,13 @@ export default function SignupPage() {
                 <div className="right-side col-lg-9">
                     <nav className="navbar navbar-expand-lg ">
                         <div className="container">
-                            <button className="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <button
+                                className="navbar-toggler text-white"
+                                type="button"
+                                onClick={handleToggle}>
                                 <span className="navbar-toggler-icon"></span>
                             </button>
-                            <div className="collapse navbar-collapse" id="navbarNav">
+                            <div className="collapse navbar-collapse" id="navbarNav" ref={navbarRef}>
                                 <ul className="navbar-nav d-flex justify-content-around gap-5">
                                     <li className="nav-item"><a className="nav-link text-white fw-bold text-decoration-none" href="#">HOME</a></li>
                                     <li className="nav-item"><a className="nav-link text-white fw-bold text-decoration-none" href="#">ABOUT US</a></li>
@@ -107,7 +120,7 @@ export default function SignupPage() {
                                 </ul>
                             </div>
                             <div className="d-flex align-items-center gap-4 me-5">
-                                <i className="fas fa-shopping-bag text-white me-3"></i>
+                                {/* <i className="fas fa-shopping-bag text-white me-3"></i> */}
                                 <Link to="/login" className="btn btn-light my-primary-text my-button-secondary text-decoration-none fw-bold">Log In</Link>
                             </div>
                         </div>
@@ -177,9 +190,9 @@ export default function SignupPage() {
             {/* Error Modal */}
             <div className="modal fade" id="errorModal" tabIndex="-1">
                 <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title text-danger">Error</h5>
+                    <div className="modal-content" style={{marginTop: '100px'}}>
+                        <div className="modal-header modal-success">
+                            <h5 className="modal-title text-white">Error</h5>
                             <button type="button" className="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div className="modal-body">{errorMessage}</div>
@@ -190,11 +203,11 @@ export default function SignupPage() {
             {/* Success Modal */}
             <div className="modal fade" id="successModal" tabIndex="-1">
                 <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title text-success">Success</h5>
+                    <div className="modal-content" style={{marginTop: '100px'}}>
+                        <div className="modal-header modal-success">
+                            <h5 className="modal-title text-white">Success</h5>
                         </div>
-                        <div className="modal-body">Account created successfully! Redirecting...</div>
+                        <div className="modal-body">Account created successfully!</div>
                     </div>
                 </div>
             </div>

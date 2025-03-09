@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useRef } from "react";
 import "../components/css/navbar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -8,6 +9,7 @@ import Illlustration from "../src/assets/Illustration.png";
 
 export default function LoginPage() {
     const [showPassword, setShowPassword] = useState(false);
+    const navbarRef = useRef(null);
     const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
         email: "",
@@ -66,6 +68,15 @@ export default function LoginPage() {
         }
     };
 
+    const handleToggle = () => {
+        if (navbarRef.current) {
+            const bsCollapse = new window.bootstrap.Collapse(navbarRef.current, {
+                toggle: true,
+            });
+        }
+    };
+
+
     return (
         <div className="Navbar-section">
             <div className="d-flex">
@@ -84,12 +95,16 @@ export default function LoginPage() {
                     <nav className="navbar navbar-expand-lg">
                         <div className="container">
                             {/* Navbar Toggler for Mobile */}
-                            <button className="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <button
+                                className="navbar-toggler text-white"
+                                type="button"
+                                onClick={handleToggle} // Custom toggle function
+                            >
                                 <span className="navbar-toggler-icon"></span>
                             </button>
 
                             {/* Navbar Links */}
-                            <div className="collapse navbar-collapse" id="navbarNav">
+                            <div className="collapse navbar-collapse" id="navbarNav" ref={navbarRef}>
                                 <ul className="navbar-nav d-flex justify-content-around gap-5">
                                     <li className="nav-item">
                                         <Link className="nav-link text-white fw-bold text-decoration-none" to="/">HOME</Link>
@@ -108,7 +123,7 @@ export default function LoginPage() {
 
                             {/* Right Side: Cart Icon & Sign Up Button */}
                             <div className="d-flex align-items-center gap-4 me-5">
-                                <i className="fas fa-shopping-bag text-white me-3"></i>
+                                {/* <i className="fas fa-shopping-bag text-white me-3"></i> */}
                                 <Link to="/signup" className="btn btn-light my-primary-text my-button-secondary fw-bold text-decoration-none">
                                     SIGN UP
                                 </Link>
@@ -176,14 +191,13 @@ export default function LoginPage() {
                 </div>
             </div>
 
-            {isLoading && <p>Loading...</p>} {/* Loader Message */}
 
             {/* Error Modal */}
             <div className="modal fade" id="errorModal" tabIndex="-1">
                 <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title text-danger">Error</h5>
+                    <div className="modal-content" style={{ marginTop: '100px' }}>
+                        <div className="modal-header modal-success">
+                            <h5 className="modal-title text-white">Error</h5>
                             <button type="button" className="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div className="modal-body">{errorMessage}</div>
@@ -194,9 +208,9 @@ export default function LoginPage() {
             {/* Success Modal */}
             <div className="modal fade" id="successModal" tabIndex="-1">
                 <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title text-success">Success</h5>
+                    <div className="modal-content" style={{ marginTop: '100px' }}>
+                        <div className="modal-header modal-success">
+                            <h5 className="modal-title text-white">Success</h5>
                         </div>
                         <div className="modal-body">Login successful! Redirecting...</div>
                     </div>

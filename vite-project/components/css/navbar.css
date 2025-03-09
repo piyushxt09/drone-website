@@ -36,6 +36,7 @@
     .navbar {
         background-color: var(--primary-color);
         margin: 20px 16px !important;
+        width: 350px;
     }
     .LogOUTbtn{
         display: block;
@@ -43,7 +44,7 @@
 }
 
 .LogOUTbtn {
-    display: none;
+    display: none !important;
 }
 .my-button-primary {
     background-color: var(--primary-color) !important;

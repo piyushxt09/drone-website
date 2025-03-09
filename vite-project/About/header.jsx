@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useState } from 'react';
-import './css/navbar.css';
+import '../components/css/navbar.css';
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import Bootstrap JS (includes Popper.js)
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -8,6 +8,8 @@ import logo from "../src/assets/logo.png";
 import DronePhoto from "../src/assets/dronephoto.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faMap, faLayerGroup, faCircleNotch, faExpand } from "@fortawesome/free-solid-svg-icons";
+import './header.css'
+
 
 const brands = [
     { icon: faGlobe, name: "Cozybnb" },
@@ -18,7 +20,7 @@ const brands = [
 ];
 
 
-export default function navbar() {
+export default function Header() {
 
     const [rotation, setRotation] = useState({ x: 0, y: 0 });
     const navbarRef = useRef(null);
@@ -111,40 +113,39 @@ export default function navbar() {
                         </div>
                     </nav>
 
-                    <section className="container text-center py-5">
-                        {/* Title */}
-                        <h2 className=" my-primary-text">DJI MINI 3 PRO</h2>
+                    <section className="container py-5 mt-5">
+                        <div className="row align-items-center px-5">
 
-                        {/* Description */}
-                        <p className="text-muted mx-auto" style={{ maxWidth: "600px" }}>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Experience the best drone technology with top-tier features and design.
-                        </p>
+                            <div className="col-lg-3">
 
-                        {/* Drone Image */}
-                        <div className="drone-container w-sm-200px">
-                            <img
-                                src={DronePhoto}
-                                alt="DJI Mini 3 Pro"
-                                className="drone-img img-fluid my-4"
-                                onMouseMove={handleMouseMove}
-                                onMouseLeave={handleMouseLeave}
-                                style={{
-                                    transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
-                                }}
-                            />
+
+                                {/* Title */}
+                                <h2 className="my-primary-text unstyled display-5 fw-bold">About Us</h2>
+                                <ul className="d-flex gap-2 list-unstyled">
+                                    <li><a href="/" className="text-decoration-none">Home</a> /</li>
+                                    <li><a href="about-us" className="text-decoration-none">About us</a></li>
+                                </ul>
+                            </div>
+
+
+                            {/* Drone Image */}
+                            <div className="drone-container drone-container-my w-sm-200px col-lg-9">
+                                <img
+                                    src={DronePhoto}
+                                    alt="DJI Mini 3 Pro"
+                                    className="drone-img img-fluid my-4"
+                                    onMouseMove={handleMouseMove}
+                                    onMouseLeave={handleMouseLeave}
+                                    style={{
+                                        transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
+                                    }}
+                                />
+                            </div>
                         </div>
-
-                        <br />
-                        {/* Buy Now Button */}
-                        <button className="btn my-button-primary btn-lg rounded-pill">
-                            BUY NOW
-                        </button>
                     </section>
 
                 </div>
             </div>
-
             <section className=" list-home ">
                 <div className="container">
                     <div className="row justify-content-center text-center gap-3">
@@ -159,6 +160,7 @@ export default function navbar() {
                     </div>
                 </div>
             </section>
+
         </div>
     )
 }

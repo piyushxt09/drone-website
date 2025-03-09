@@ -5,6 +5,7 @@
   --primary-color: #12B4DA;
 }
 
+
 .my-primary-text {
   color: var(--primary-color) !important;
 }
@@ -80,19 +81,18 @@ body {
 
 .signup-container {
   border-radius: 10px;
-  margin: 20px;
   max-width: 1000px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 30px auto;
+  margin-top: 30px;
 }
 
 input.form-control {
-  border: 1px solid #00aaff;
+  border: 1px solid var(--primary-color);
   border-radius: 5px;
 }
 
 button.btn-primary {
-  background-color: #00aaff;
+  background-color: var(--primary-color);
   border: none;
   padding: 10px;
   font-size: 16px;
@@ -100,14 +100,25 @@ button.btn-primary {
 }
 
 button.btn-primary:hover {
-  background-color: #008ecc;
+  background-color: var(--primary-color);
 }
 
 a {
-  color: #00aaff;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+
+  .signup-container {
+    border-radius: 10px;
+    /* max-width: 1036px; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    width: 390px;
+  }
 }
