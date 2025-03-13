@@ -1,0 +1,42 @@
+:root {
+    --primary-color: #12B4DA;
+}
+
+.contact-section .input-group input {
+    padding: 12px;
+}
+
+.contact-section button{
+    padding: 10px;
+    background-color: var(--primary-color) !important;
+    border:  1px solid var(--primary-color) !important;
+    transition: 0.4s  ;
+}
+.contact-section button:hover{
+    background-color: white !important;
+    color: var(--primary-color) !important;
+}
+
+
+.info-section .icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #12B4DA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -60px;
+    border-radius: 50%;
+}
+
+.info-section h5 {
+    margin-top: -50px;
+}
+
+.info-section p {
+    padding-bottom: 40px;
+}
+.info-section .bg-light {
+    background-color: #0000000c !important;
+}

@@ -21,7 +21,7 @@ export default function AboutMainSection() {
 
                 {/* Right Content Section */}
                 <div className="col-md-6">
-                    <h6 className="text-uppercase text-black fw-bold">About Us</h6>
+                    <h6 className="text-uppercase text-black my-primary-text">— About Us —</h6>
                     <h2 className="fw-bold my-primary-text">Our Journey in Drone Technology</h2>
                     <p className="text-muted">
                         Welcome to PDRONE! We specialize in cutting-edge drone technology,

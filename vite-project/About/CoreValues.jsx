@@ -7,7 +7,7 @@ const CoreValues = () => {
   return (
     <section className="core-values-section" style={{margin: '100px auto'}}>
       <div className="container">
-        <h6>Core Values</h6>
+        <h6 className="my-primary-text">— Core Values —</h6>
         <h2>The Core Values That Drive Everything</h2>
 
         <div className="row mt-4 d-flex justify-content-center">

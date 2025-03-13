@@ -85,7 +85,7 @@ export default function navbar() {
                                         <a className="nav-link text-white fw-bold text-decoration-none" href="#">PRODUCTS</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link text-white fw-bold text-decoration-none" href="#">CONTACT US</a>
+                                        <a className="nav-link text-white fw-bold text-decoration-none" href="contact-us">CONTACT US</a>
                                     </li>
                                     <li className="nav-item">
                                         <a className="nav-link text-white fw-bold text-decoration-none LogOUTbtn" href="/logout">LOG OUT
@@ -117,8 +117,8 @@ export default function navbar() {
 
                         {/* Description */}
                         <p className="text-muted mx-auto" style={{ maxWidth: "600px" }}>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Experience the best drone technology with top-tier features and design.
+                            Ultra-light, 4K HDR, obstacle avoidance, extended flight time
+                            GPS tracking, portability, seamless control, pro-level performance.
                         </p>
 
                         {/* Drone Image */}

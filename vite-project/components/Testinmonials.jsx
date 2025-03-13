@@ -10,33 +10,33 @@ import "./css/Testimonials.css"; // Custom styles
 const testimonials = [
     {
         id: 1,
-        name: "Josephine",
+        name: "Michael R.",
         image: "https://randomuser.me/api/portraits/men/32.jpg",
-        text: "Lorem Ipsum is simply dummy text of the industry standard typesetting.",
-    },
-    {
-        id: 5,
-        name: "Josephine",
-        image: "https://randomuser.me/api/portraits/women/44.jpg",
-        text: "Lorem Ipsum is simply dummy text of the industry standard typesetting.",
+        text: "PDrone offers top-tier drones with stunning 4K video quality and long battery life. Absolutely love the flight stability!",
     },
     {
         id: 2,
-        name: "Josephine",
+        name: "Samantha K.",
         image: "https://randomuser.me/api/portraits/women/44.jpg",
-        text: "Lorem Ipsum is simply dummy text of the industry standard typesetting.",
+        text: "Incredible drones! The GPS tracking and intelligent flight modes make capturing cinematic shots effortless. Highly recommend PDrone!",
     },
     {
         id: 3,
-        name: "Josephine",
+        name: "Daniel J.",
         image: "https://randomuser.me/api/portraits/men/42.jpg",
-        text: "Lorem Ipsum is simply dummy text of the industry standard typesetting.",
+        text: "PDrone provides the best drones for beginners and pros. Lightweight, easy to control, and perfect for aerial photography.",
     },
     {
         id: 4,
-        name: "Josephine",
-        image: "https://randomuser.me/api/portraits/men/42.jpg",
-        text: "Lorem Ipsum is simply dummy text of the industry standard typesetting.",
+        name: "Emily W.",
+        image: "https://randomuser.me/api/portraits/women/32.jpg",
+        text: "Super smooth flying experience! The obstacle avoidance and real-time video transmission are game-changers. Thanks, PDrone!",
+    },
+    {
+        id: 5,
+        name: "James L.",
+        image: "https://randomuser.me/api/portraits/men/45.jpg",
+        text: "Best drone purchase ever! PDrone’s customer service and advanced drone technology exceeded my expectations. Worth every penny!",
     },
 ];
 

@@ -87,7 +87,7 @@ export default function Header() {
                                         <a className="nav-link text-white fw-bold text-decoration-none" href="#">PRODUCTS</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link text-white fw-bold text-decoration-none" href="contact-us">CONTACT US</a>
+                                        <a className="nav-link text-white fw-bold text-decoration-none" href="#">CONTACT US</a>
                                     </li>
                                     <li className="nav-item">
                                         <a className="nav-link text-white fw-bold text-decoration-none LogOUTbtn" href="/logout">LOG OUT
@@ -120,10 +120,10 @@ export default function Header() {
 
 
                                 {/* Title */}
-                                <h2 className="my-primary-text unstyled display-5 fw-bold">About Us</h2>
+                                <h2 className="my-primary-text unstyled display-6 fw-bold">Contact Us</h2>
                                 <ul className="d-flex gap-2 list-unstyled">
                                     <li><a href="/" className="text-decoration-none">Home</a> /</li>
-                                    <li><a href="about-us" className="text-decoration-none">About us</a></li>
+                                    <li><a href="about-us" className="text-decoration-none">Cotnact Us</a></li>
                                 </ul>
                             </div>
 

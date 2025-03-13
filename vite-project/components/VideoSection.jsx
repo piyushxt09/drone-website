@@ -38,7 +38,7 @@ const VideoSection = () => {
             {/* Bootstrap Modal */}
             {showModal && (
                 <div className="modal fade show d-block" tabIndex="-1" role="dialog">
-                    <div className="modal-dialog modal-lg" role="document">
+                    <div className="modal-dialog modal-xl" role="document">
                         <div className="modal-content" style={{marginTop: '100px'}}>
                             <div className="modal-header modal-success">
                                 <h5 className="modal-title">Watch Video</h5>

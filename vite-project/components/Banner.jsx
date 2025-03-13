@@ -13,12 +13,12 @@ const Banner = () => {
               src={DronePhoto}
               alt="Drone"
               className="img-fluid mt-5 "
-              
+
             />
           </div>
           <div className="col-lg-6 p-5">
             <h2 className="display-4 text-start fw-500" style={{ maxWidth: "500px" }}>Are you ready to lead the way</h2>
-            <p className="text-start" style={{ maxWidth: "400px" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+            <p className="text-start" style={{ maxWidth: "400px" }}>Innovative, powerful, smart controls, ultra-light, high-speed, precision flying.</p>
             <button className="d-flex btn btn-light banner-button">Explore</button>
           </div>
         </div>

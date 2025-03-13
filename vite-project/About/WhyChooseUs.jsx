@@ -7,7 +7,7 @@ import WhyChooseImg from '../src/assets/whychoose.jpg';
 const WhyChooseUs = () => {
     return (
         <section className="container text-center my-5" style={{margin: '100px auto !important;'}}>
-            <h6 className="text-black fw-bold text-uppercase">Why Choose Us</h6>
+            <h6 className="text-black my-primary-text text-uppercase">— Why Choose Us —</h6>
             <h2 className="fw-bold my-primary-text">Your Drone Services Will Be Exceptional With Us</h2>
 
             <div className="row align-items-center my-4">

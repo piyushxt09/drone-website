@@ -1,14 +1,14 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";  
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import  banner from "../src/assets/banner.png"
+import banner from "../src/assets/banner.png"
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import droneimage from "../src/assets/droneimage.png";  
+import droneimage from "../src/assets/droneimage.png";
 import Banner from "./Banner";
-import "./css/popular-slider.css";  
+import "./css/popular-slider.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -34,7 +34,7 @@ export default function Popularslider() {
               <p className="trending-drones my-primary-text">— Our Trending Drones</p>
             </div>
             <h1>Most Popular Drones</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>4K camera, GPS, obstacle avoidance, extended flight, portability, AI tracking, stability, long range, intelligent modes, high performance.</p>
             <button className="my-button-primary" style={{ fontSize: "24px" }}>Explore</button>
           </div>
 
