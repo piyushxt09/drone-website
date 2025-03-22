@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
-import { useState, useEffect } from 'react';
-
-import './css/navbar.css';
+import { useState } from 'react';
+import '../components/css/navbar.css';
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import Bootstrap JS (includes Popper.js)
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -9,6 +8,8 @@ import logo from "../src/assets/logo.png";
 import DronePhoto from "../src/assets/dronephoto.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faMap, faLayerGroup, faCircleNotch, faExpand } from "@fortawesome/free-solid-svg-icons";
+import '../About/header.css';
+
 
 const brands = [
     { icon: faGlobe, name: "Cozybnb" },
@@ -19,25 +20,7 @@ const brands = [
 ];
 
 
-export default function navbar() {
-
-    const [fullName, setFullName] = useState(""); // Default to 'User' if no data
-
-    useEffect(() => {
-        // Retrieve the entire user object from local storage
-        const storedUser = localStorage.getItem("user");
-
-        if (storedUser) {
-            try {
-                const user = JSON.parse(storedUser); // Parse JSON to object
-                if (user.firstName && user.lastName) {
-                    setFullName(`${user.firstName} ${user.lastName}`);
-                }
-            } catch (error) {
-                console.error("Error parsing user data:", error);
-            }
-        }
-    }, []);
+export default function ProductHeader() {
 
     const [rotation, setRotation] = useState({ x: 0, y: 0 });
     const navbarRef = useRef(null);
@@ -101,7 +84,7 @@ export default function navbar() {
                                         <a className="nav-link text-white fw-bold text-decoration-none" href="about-us">ABOUT US</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link text-white fw-bold text-decoration-none" href="products">PRODUCTS</a>
+                                        <a className="nav-link text-white fw-bold text-decoration-none" href="#">PRODUCTS</a>
                                     </li>
                                     <li className="nav-item">
                                         <a className="nav-link text-white fw-bold text-decoration-none" href="contact-us">CONTACT US</a>
@@ -130,41 +113,39 @@ export default function navbar() {
                         </div>
                     </nav>
 
-                    <h2 className=" my-primary-text text-center text-md-start mb-1 fs-6 mx-5">Welcome, {fullName}</h2>
-                    <section className="container text-center py-5">
-                        {/* Title */}
-                        <h2 className=" my-primary-text">DJI MINI 3 PRO</h2>
+                    <section className="container py-5 mt-5">
+                        <div className="row align-items-center px-5">
 
-                        {/* Description */}
-                        <p className="text-muted mx-auto" style={{ maxWidth: "600px" }}>
-                            Ultra-light, 4K HDR, obstacle avoidance, extended flight time
-                            GPS tracking, portability, seamless control, pro-level performance.
-                        </p>
+                            <div className="col-lg-3">
 
-                        {/* Drone Image */}
-                        <div className="drone-container w-sm-200px">
-                            <img
-                                src={DronePhoto}
-                                alt="DJI Mini 3 Pro"
-                                className="drone-img img-fluid my-4"
-                                onMouseMove={handleMouseMove}
-                                onMouseLeave={handleMouseLeave}
-                                style={{
-                                    transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
-                                }}
-                            />
+
+                                {/* Title */}
+                                <h2 className="my-primary-text unstyled display-5 fw-bold">Products</h2>
+                                <ul className="d-flex gap-2 list-unstyled">
+                                    <li><a href="/" className="text-decoration-none">Home</a> /</li>
+                                    <li><a href="about-us" className="text-decoration-none">Products</a></li>
+                                </ul>
+                            </div>
+
+
+                            {/* Drone Image */}
+                            <div className="drone-container drone-container-my w-sm-200px col-lg-9">
+                                <img
+                                    src={DronePhoto}
+                                    alt="DJI Mini 3 Pro"
+                                    className="drone-img img-fluid my-4"
+                                    onMouseMove={handleMouseMove}
+                                    onMouseLeave={handleMouseLeave}
+                                    style={{
+                                        transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
+                                    }}
+                                />
+                            </div>
                         </div>
-
-                        <br />
-                        {/* Buy Now Button */}
-                        <button className="btn my-button-primary btn-lg rounded-pill">
-                            BUY NOW
-                        </button>
                     </section>
 
                 </div>
             </div>
-
             <section className=" list-home ">
                 <div className="container">
                     <div className="row justify-content-center text-center gap-3">
@@ -179,6 +160,7 @@ export default function navbar() {
                     </div>
                 </div>
             </section>
+
         </div>
     )
 }

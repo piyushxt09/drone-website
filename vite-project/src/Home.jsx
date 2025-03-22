@@ -19,7 +19,7 @@ export default function Home() {
             navigate("/login"); // Redirect to login if not authenticated
         }
     }, [navigate]); // Run effect when component mounts
-    
+
     return (
         <div>
             <Navbar />

@@ -1,0 +1,19 @@
+:root {
+    --primary-color: #12B4DA;
+}
+
+.Products-Section img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/* For Chrome, Safari, Edge */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; /* Thumb size */
+    height: 20px;
+    background: var(--primary-color); /* Change to your desired color */
+    border-radius: 50%;
+    cursor: pointer;
+}

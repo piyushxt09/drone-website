@@ -38,7 +38,8 @@
         margin: 20px 16px !important;
         width: 350px;
     }
-    .LogOUTbtn{
+
+    .LogOUTbtn {
         display: block;
     }
 }
@@ -46,6 +47,7 @@
 .LogOUTbtn {
     display: none !important;
 }
+
 .my-button-primary {
     background-color: var(--primary-color) !important;
     color: white !important;
@@ -85,7 +87,7 @@ body {
 
 .Navbar-section .left-side {
     background-color: var(--primary-color);
-    height: 105vh;
+    height: 107vh;
     border-right: white;
 
 }
