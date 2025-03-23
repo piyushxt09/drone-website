@@ -5,7 +5,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import droneimage from "../src/assets/droneimage.png";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import drone2 from "../src/assets/drone-2.png";  
+import drone2 from "../src/assets/drone-2.png";
 
 const products = [
     { id: 1, name: "DRV124 PRO S", price: 2999, oldPrice: 4999, category: "EPIC", image: droneimage },
@@ -59,15 +59,15 @@ export default function Bestselling() {
                         <h3 className="text-lg  font-semibold text-start mb-3 mt-3 ">{product.name}</h3>
                         <div className="d-flex justify-content-between align-items-center">
 
-                        <div className="d-flex align-items-center gap-4">
-                            <p className="text-xl font-bold">₹ {product.price}.00</p>
-                            <p className="text-decoration-line-through text-gray-500 fs-sm">₹ {product.oldPrice}.00</p>
-                        </div>
-                        <div className="text-center">
-                            <button className="btn btn-info text-white rounded-circle">
-                                <FaArrowUpRightFromSquare />
-                            </button>
-                        </div>
+                            <div className="d-flex align-items-center gap-4">
+                                <p className="text-xl font-bold">₹ {product.price}.00</p>
+                                <p className="text-decoration-line-through text-gray-500 fs-sm">₹ {product.oldPrice}.00</p>
+                            </div>
+                            <div className="text-center">
+                                <button className="btn btn-info text-white rounded-circle">
+                                    <FaArrowUpRightFromSquare />
+                                </button>
+                            </div>
                         </div>
                     </div>
                 ))}

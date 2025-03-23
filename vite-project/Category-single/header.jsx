@@ -8,7 +8,8 @@ import logo from "../src/assets/logo.png";
 import DronePhoto from "../src/assets/dronephoto.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faMap, faLayerGroup, faCircleNotch, faExpand } from "@fortawesome/free-solid-svg-icons";
-import '../About/header.css';
+import '../about/header.css';
+
 
 
 const brands = [
@@ -20,7 +21,7 @@ const brands = [
 ];
 
 
-export default function ProductHeader() {
+export default function Header() {
 
     const [rotation, setRotation] = useState({ x: 0, y: 0 });
     const navbarRef = useRef(null);
@@ -120,10 +121,10 @@ export default function ProductHeader() {
 
 
                                 {/* Title */}
-                                <h2 className="my-primary-text unstyled display-5 fw-bold">Products</h2>
+                                <h2 className="my-primary-text unstyled display-5 fw-bold">Category Single</h2>
                                 <ul className="d-flex gap-2 list-unstyled">
                                     <li><a href="/" className="text-decoration-none">Home</a> /</li>
-                                    <li><a href="about-us" className="text-decoration-none">Products</a></li>
+                                    <li><a href="about-us" className="text-decoration-none">Category Single</a></li>
                                 </ul>
                             </div>
 
@@ -146,11 +147,11 @@ export default function ProductHeader() {
 
                 </div>
             </div>
-            <section className=" list-home mb-5">
+            <section className=" list-home ">
                 <div className="container">
                     <div className="row justify-content-center text-center gap-3">
                         {brands.map((brand, index) => (
-                            <div key={index} className="col-6  col-sm-4 col-md-2 d-flex justify-content-center">
+                            <div key={index} className="col-6 col-sm-4 col-md-2 d-flex justify-content-center">
                                 <div className="d-flex align-items-center gap-2 text-white fw-semibold fs-5">
                                     <FontAwesomeIcon icon={brand.icon} />
                                     <span>{brand.name}</span>

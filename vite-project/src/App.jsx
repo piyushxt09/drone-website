@@ -8,6 +8,7 @@ import About from "./About";
 import Contact from "../Contact/Contact";
 import Loader from "./Loader";
 import Products from "./Products";
+import CategorySingle from "./CategorySingle";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/logout" element={<Logout />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/category-single" element={<CategorySingle />} />
           <Route path="/contact-us" element={<Contact />} />
         </Routes>
       </Router>
