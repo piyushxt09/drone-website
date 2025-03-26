@@ -8,8 +8,7 @@ import logo from "../src/assets/logo.png";
 import DronePhoto from "../src/assets/dronephoto.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faMap, faLayerGroup, faCircleNotch, faExpand } from "@fortawesome/free-solid-svg-icons";
-import '../about/header.css';
-
+import '../About/header.css'
 
 
 const brands = [
@@ -21,7 +20,7 @@ const brands = [
 ];
 
 
-export default function HeaderCate() {
+export default function header() {
 
     const [rotation, setRotation] = useState({ x: 0, y: 0 });
     const navbarRef = useRef(null);
@@ -121,10 +120,10 @@ export default function HeaderCate() {
 
 
                                 {/* Title */}
-                                <h2 className="my-primary-text unstyled display-5 fw-bold">Category Single</h2>
+                                <h2 className="my-primary-text unstyled display-5 fw-bold">Product Detail</h2>
                                 <ul className="d-flex gap-2 list-unstyled">
                                     <li><a href="/" className="text-decoration-none">Home</a> /</li>
-                                    <li><a href="about-us" className="text-decoration-none">Category Single</a></li>
+                                    <li><a href="about-us" className="text-decoration-none">Product Detail</a></li>
                                 </ul>
                             </div>
 

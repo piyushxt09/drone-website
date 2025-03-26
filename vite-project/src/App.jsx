@@ -9,11 +9,13 @@ import Contact from "../Contact/Contact";
 import Loader from "./Loader";
 import Products from "./Products";
 import CategorySingle from "./CategorySingle";
+import ProductDetail from "./ProductDetail";
 
 function App() {
   return (
     <>
       <Loader />
+
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,6 +25,7 @@ function App() {
           <Route path="/about-us" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/category-single" element={<CategorySingle />} />
+          <Route path="/product-detail" element={<ProductDetail />} />
           <Route path="/contact-us" element={<Contact />} />
         </Routes>
       </Router>

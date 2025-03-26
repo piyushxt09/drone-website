@@ -6,6 +6,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import droneimage from "../src/assets/droneimage.png";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import drone2 from "../src/assets/drone-2.png";
+import { Link } from "react-router-dom";
 
 const products = [
     { id: 1, name: "DRV124 PRO S", price: 2999, oldPrice: 4999, category: "EPIC", image: droneimage },
@@ -17,6 +18,7 @@ const products = [
 ];
 
 export default function Category() {
+
     return (
         <div className="text-center best-selling container mt-5">
             <h2 className="text-2xl mb-4" style={{ color: "var(--primary-color)" }}>
@@ -39,7 +41,9 @@ export default function Category() {
                             </div>
                             <div className="text-center">
                                 <button className="btn btn-info text-white rounded-circle">
-                                    <FaArrowUpRightFromSquare />
+                                    <Link to="/product-detail">
+                                        <FaArrowUpRightFromSquare className='text-white'/>
+                                    </Link>
                                 </button>
                             </div>
                         </div>
