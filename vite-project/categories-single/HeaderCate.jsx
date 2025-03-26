@@ -21,7 +21,7 @@ const brands = [
 ];
 
 
-export default function Header() {
+export default function HeaderCate() {
 
     const [rotation, setRotation] = useState({ x: 0, y: 0 });
     const navbarRef = useRef(null);
