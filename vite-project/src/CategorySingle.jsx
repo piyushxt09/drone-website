@@ -6,9 +6,9 @@ import Footer from '../components/Footer';
 export default function CategorySingle() {
   return (
     <>
-      < Header />
-      < Category />
-      < Footer />
+      <Header />
+      <Category />
+      <Footer />
     </>
   )
 }
