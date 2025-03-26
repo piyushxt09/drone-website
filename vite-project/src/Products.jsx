@@ -212,7 +212,7 @@ const Products = () => {
                                             className="img-fluid rounded mb-3 "
                                         />
                                         <p>{category.description}</p>
-                                        <a href="category-single"  className="btn my-primary-button text-decoration-none" >See more</a>
+                                        <a href="category-single" className="btn my-primary-button text-decoration-none" >See more</a>
                                     </div>
                                 </div>
                             ))}
