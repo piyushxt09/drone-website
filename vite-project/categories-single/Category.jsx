@@ -42,7 +42,7 @@ export default function Category() {
                             <div className="text-center">
                                 <button className="btn btn-info text-white rounded-circle">
                                     <Link to="/product-detail">
-                                        <FaArrowUpRightFromSquare className='text-white'/>
+                                        <FaArrowUpRightFromSquare className='text-white' />
                                     </Link>
                                 </button>
                             </div>

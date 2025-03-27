@@ -8,7 +8,7 @@ import logo from "../src/assets/logo.png";
 import DronePhoto from "../src/assets/dronephoto.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faMap, faLayerGroup, faCircleNotch, faExpand } from "@fortawesome/free-solid-svg-icons";
-import '../about/header.css';
+import '../About/header.css';
 
 
 
