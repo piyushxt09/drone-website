@@ -113,12 +113,10 @@ export default function header() {
                         </div>
                     </nav>
 
-                    <section className="container py-5 mt-5">
-                        <div className="row align-items-center px-5">
+                    <section className="container py-3 py-md-5">
+                        <div className="row align-items-start align-items-md-center px-5 flex-column-reverse">
 
-                            <div className="col-lg-3">
-
-
+                            <div className="col-lg-7">
                                 {/* Title */}
                                 <h2 className="my-primary-text unstyled display-5 fw-bold">Product Detail</h2>
                                 <ul className="d-flex gap-2 list-unstyled">
@@ -126,8 +124,6 @@ export default function header() {
                                     <li><a href="about-us" className="text-decoration-none">Product Detail</a></li>
                                 </ul>
                             </div>
-
-
                             {/* Drone Image */}
                             <div className="drone-container drone-container-my w-sm-200px col-lg-9">
                                 <img
@@ -146,20 +142,24 @@ export default function header() {
 
                 </div>
             </div>
+
+
             <section className=" list-home ">
                 <div className="container">
-                    <div className="row justify-content-center text-center gap-3">
+                    <div className="d-flex justify-content-center text-center gap-5 flex-row">
                         {brands.map((brand, index) => (
-                            <div key={index} className="col-6 col-sm-4 col-md-2 d-flex justify-content-center">
-                                <div className="d-flex align-items-center gap-2 text-white fw-semibold fs-5">
+                            <div key={index} className=" d-flex justify-content-center">
+                                <div className="d-flex align-items-center gap-2 text-white fw-semibold fs-5 ">
                                     <FontAwesomeIcon icon={brand.icon} />
-                                    <span>{brand.name}</span>
+                                    <span className="d-none d-md-block">{brand.name}</span>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
+
+            
 
         </div>
     )

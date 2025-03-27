@@ -77,6 +77,7 @@ export default function Popularslider() {
               ))}
             </Swiper>
           </div>
+          
         </div>
 
         <div className="col-lg-12 mt-5 mb-2">

@@ -11,7 +11,6 @@ import { faGlobe, faMap, faLayerGroup, faCircleNotch, faExpand } from "@fortawes
 import '../About/header.css';
 
 
-
 const brands = [
     { icon: faGlobe, name: "Cozybnb" },
     { icon: faMap, name: "Serendipity" },
@@ -19,7 +18,6 @@ const brands = [
     { icon: faCircleNotch, name: "The Nook" },
     { icon: faExpand, name: "Homely" },
 ];
-
 
 export default function HeaderCate() {
 

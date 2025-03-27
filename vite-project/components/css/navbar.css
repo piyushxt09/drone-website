@@ -42,6 +42,11 @@
     .LogOUTbtn {
         display: block;
     }
+
+    .list-home {
+        background-color: var(--primary-color) !important;
+        padding: 20px !important;
+    }
 }
 
 .LogOUTbtn {
@@ -149,9 +154,5 @@ body {
 
 .list-home {
     background-color: var(--primary-color) !important;
-    padding: 40px;
-}
-
-.list-home container {
-    padding-top: 40px;
+    padding: 40px 20px;
 }
