@@ -6,9 +6,12 @@ require("dotenv").config();
 
 const app = express();
 
-// Middleware
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://drone-website-frontend-oltr.onrender.com'
+}));
 app.use(express.json());
+
 
 // Routes
 app.use("/api", authRoutes);
